@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#Exploring dara frames\n\n#load the data\ncats <- read.csv(file=\"feline_data.csv\")\ncats <- read.csv(file=\"felince_data.csv\")\n\n#add another column to an existing dataframe\nage <- c(2, 3, 5)\n\n#two separate dataframes - cats and age. Gotta combine them\ncbind(cats, age)\n\n#what if the new column was longer the dataframe\nage <- c(2, 3, 5, 9)\ncbind(cats, age)\n\nage <- c(2, 3, 5)\ncats <- cbind(cats, age)\ncats\n\n#adding a new row\nnewRow <- list(\"White\", 3.3, TRUE, 9)\ncats <- rbind(cats, newRow)\n\n#adding white as a factor\nlevels(cats$coat)\nlevels(cats$coat) <- c(levels(cats$coat), \"White\")\n\n#adding a new row again\ncats <- rbind(cats, list(\"White\", 3.3, TRUE, 9))\ncats\n\n#challenge1\nhuman.age <- cats$age * 7\nhuman.age <- factor(human.age)\nas.numeric(human.age)\nhuman.age\nhuman.age <- as.numeric(human.age)\nage <- human.age /7\n\n#deleting rows\ncats\ncats[c(-4, -5, -7),]\n#but that doesn't overwrite existing data set, it's still 7 observations\n\n#overwriting, to remove rows that have N/A values\nna.omit(cats)\ncats <- na.omit(cats)\n\n#fix row name indexing\ncats\nrownames(cats) <- NULL\ncats\n\n#challenge2\ndf <- data.frame (first = c(\"Dovile\"), last = c(\"Milonaityte\"), lucky_number = c(\"13\"), stringsAsFactors = FALSE)\n\ndf\nrbind(df, list(\"Grace\", \"Smith\", \"0\"))\ndf <- rbind(df, list(\"Grace\", \"Smith\", \"0\"))\ndf\n\ncbind (df, coffeebreak=c(TRUE, TRUE))\n\ndownload.file(\"https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder-FiveYearData.csv\", destfile = \"data/gapminder-FiveYearData.csv\")\ngapminder <- read.csv(\"data/gapminder-FiveYearData.csv\")\nstr(gapminder)\ntypeof(gapminder$year)\nstr(gapminder$country)\nlength(gapminder)\ntypeof(gapminder)\n\nnrow(gapminder)\n\ncolnames(gapminder)\n\nhead(gapminder)\n\n#challenge3\ntail(gapminder)\ntail(gapminder, n=15)\n\ngapminder[sample(nrow(gapminder), 5), ]\n      ",
+    "created" : 1516198123326.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "236160988",
+    "id" : "AE217B9D",
+    "lastKnownWriteTime" : 1516202447,
+    "last_content_update" : 1516202447259,
+    "path" : "~/Desktop/intro to R/Exploring_Data_Frames.R",
+    "project_path" : "Exploring_Data_Frames.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

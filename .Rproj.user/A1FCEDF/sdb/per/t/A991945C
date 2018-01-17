@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#Lists and Matrices\n#Lists\n\nlist_example <- list(1, \"A\", TRUE, \"hello\", 12.53, -12.53)\nlist_example\nwww.github.com\n\nsecond_list <- list(title = \"Numbers\", numbers = 1:10, data = TRUE)\nsecond_list\n\n#What \"type\" is a list?\ntypeof(second_list)\ntypeof(second_list$title)\n\nprint(second_list$numbers[3])\n\n#Matrices\n#A zero filled matrix - 6 columns, 3 rows\nmatrix_example <- matrix(0, ncol=6, nrow=3)\n\nmatrix_example\n\nclass(matrix_example)\ntypeof(matrix_example)\nstr(matrix_example)\n\ndim(matrix_example)\nnrow(matrix_example)\nncol(matrix_example)\n\n#Challenge4\nlength(matrix_example)\n\n#Challege5\nchallenge5_matrix <- matrix(1:50, ncol=5, nrow=10)\nchallenge5_matrix2 <-matrix(1:50, nrow = 10, ncol=5, byrow=TRUE)\n\n#Challenge7\nmatrix(c(4, 1, 9, 5, 10, 7),ncol=2, byrow=TRUE)\n",
+    "created" : 1516195706330.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "364179019",
+    "id" : "A991945C",
+    "lastKnownWriteTime" : 1516198004,
+    "last_content_update" : 1516198004626,
+    "path" : "~/Desktop/intro to R/02_lists_matrices.R",
+    "project_path" : "02_lists_matrices.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
